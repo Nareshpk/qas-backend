@@ -1,0 +1,368 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.9
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema invoice
+--
+
+CREATE DATABASE IF NOT EXISTS invoice;
+USE invoice;
+
+--
+-- Definition of table `bill001mb`
+--
+
+DROP TABLE IF EXISTS `bill001mb`;
+CREATE TABLE `bill001mb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `billno` varchar(200) NOT NULL,
+  `cusname` varchar(200) NOT NULL,
+  `mobile` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `date` datetime NOT NULL,
+  `veichalmodel` varchar(200) NOT NULL,
+  `regno` varchar(200) NOT NULL,
+  `kms` varchar(20) NOT NULL,
+  `totalamount` int(20) DEFAULT NULL,
+  `payment` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`sl_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bill001mb`
+--
+
+/*!40000 ALTER TABLE `bill001mb` DISABLE KEYS */;
+INSERT INTO `bill001mb` (`sl_no`,`billno`,`cusname`,`mobile`,`address`,`date`,`veichalmodel`,`regno`,`kms`,`totalamount`,`payment`) VALUES 
+ (1,'QAS/0001','test1','9042180029','Kulithalai','2023-09-01 00:00:00','Bajaj','TN/81/W/6172','1500',700,'Cash'),
+ (2,'QAS/0002','Test1','9042180029','Kulithalai','2023-09-02 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (3,'QAS/0003','Test1','9042180029','Kulithalai','2023-09-03 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (4,'QAS/0004','Test1','9042180029','Kulithalai','2023-09-04 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (5,'QAS/0005','Test1','9042180029','Kulithalai','2023-09-05 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (6,'QAS/0006','Test1','9042180029','Kulithalai','2023-09-06 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (7,'QAS/0007','Test1','9042180029','Kulithalai','2023-09-07 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (8,'QAS/0008','Test1','9042180029','Kulithalai','2023-09-08 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (9,'QAS/0009','Test1','9042180029','Kulithalai','2023-09-09 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (10,'QAS/0010','Test1','9042180029','Kulithalai','2023-09-10 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (11,'QAS/0011','Test1','9042180029','Kulithalai','2023-09-11 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (12,'QAS/0012','Test1','9042180029','Kulithalai','2023-09-12 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (13,'QAS/0013','Test1','9042180029','Kulithalai','2023-09-13 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (14,'QAS/0014','Test1','9042180029','Kulithalai','2023-09-14 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (15,'QAS/0015','Test1','9042180029','Kulithalai','2023-09-15 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (16,'QAS/0016','Test1','9042180029','Kulithalai','2023-09-16 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (17,'QAS/0017','Test1','9042180029','Kulithalai','2023-09-17 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (18,'QAS/0018','Test1','9042180029','Kulithalai','2023-09-18 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (19,'QAS/0019','Test1','9042180029','Kulithalai','2023-09-19 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (20,'QAS/0020','Test1','9042180029','Kulithalai','2023-09-20 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (21,'QAS/0021','Test1','9042180029','Kulithalai','2023-09-21 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (22,'QAS/0022','Test1','9042180029','Kulithalai','2023-09-22 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (23,'QAS/0023','Test1','9042180029','Kulithalai','2023-09-23 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (24,'QAS/0024','Test1','9042180029','Kulithalai','2023-09-24 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (25,'QAS/0025','Test1','9042180029','Kulithalai','2023-09-25 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (26,'QAS/0026','Test1','9042180029','Kulithalai','2023-09-26 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (27,'QAS/0027','Test1','9042180029','Kulithalai','2023-09-27 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (28,'QAS/0028','Test1','9042180029','Kulithalai','2023-09-28 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (29,'QAS/0029','Test1','9042180029','Kulithalai','2023-09-29 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (30,'QAS/0030','Test1','9042180029','Kulithalai','2023-09-30 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (31,'QAS/0031','Test1','9042180029','Kulithalai','2023-10-01 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (32,'QAS/0032','Test1','9042180029','Kulithalai','2023-10-01 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'GPay'),
+ (33,'QAS/0033','Test1','9042180029','Kulithalai','2023-10-01 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (34,'QAS/0034','Test1','9042180029','Kulithalai','2023-10-02 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (35,'QAS/0035','Test1','9042180029','Kulithalai','2023-10-02 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (36,'QAS/0036','Test1','9042180029','Kulithalai','2023-10-02 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (37,'QAS/0037','Test1','9042180029','Kulithalai','2023-10-03 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (38,'QAS/0038','Test1','9042180029','Kulithalai','2023-10-03 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (39,'QAS/0039','Test1','9042180029','Kulithalai','2023-10-03 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Phone Pay'),
+ (40,'QAS/0040','Test1','9042180029','Kulithalai','2023-10-04 00:00:00','Bajaj	','TN/81/W/6172','10000',500,'Cash'),
+ (41,'QAS/0041','Test4','9042180029','Trichy','2023-10-07 00:00:00','discover','Tn/81/w/6060','15000',7300,'Cash');
+/*!40000 ALTER TABLE `bill001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `employee001mb`
+--
+
+DROP TABLE IF EXISTS `employee001mb`;
+CREATE TABLE `employee001mb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `ename` varchar(200) NOT NULL,
+  `econtect` varchar(200) NOT NULL,
+  `eadrress` varchar(200) NOT NULL,
+  `edob` varchar(200) NOT NULL,
+  `ejoin` varchar(200) NOT NULL,
+  PRIMARY KEY (`sl_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee001mb`
+--
+
+/*!40000 ALTER TABLE `employee001mb` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employee001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `expenses001mb`
+--
+
+DROP TABLE IF EXISTS `expenses001mb`;
+CREATE TABLE `expenses001mb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `expensesname` varchar(200) NOT NULL,
+  `expensesamount` int(200) NOT NULL,
+  `expensesdate` datetime NOT NULL,
+  PRIMARY KEY (`sl_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `expenses001mb`
+--
+
+/*!40000 ALTER TABLE `expenses001mb` DISABLE KEYS */;
+INSERT INTO `expenses001mb` (`sl_no`,`expensesname`,`expensesamount`,`expensesdate`) VALUES 
+ (1,'Machine Reapair',1500,'2023-09-02 00:00:00'),
+ (2,'Eb Bill',2000,'2023-09-06 00:00:00'),
+ (3,'Service Station Maitence',5000,'2023-10-01 00:00:00'),
+ (4,'Eb Bill',1800,'2023-10-02 00:00:00');
+/*!40000 ALTER TABLE `expenses001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `payment001wb`
+--
+
+DROP TABLE IF EXISTS `payment001wb`;
+CREATE TABLE `payment001wb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `bslno` int(11) DEFAULT NULL,
+  `workmethod` varchar(200) NOT NULL,
+  `amount` int(15) NOT NULL,
+  PRIMARY KEY (`sl_no`),
+  KEY `bslno` (`bslno`),
+  CONSTRAINT `payment001wb_ibfk_1` FOREIGN KEY (`bslno`) REFERENCES `bill001mb` (`sl_no`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payment001wb`
+--
+
+/*!40000 ALTER TABLE `payment001wb` DISABLE KEYS */;
+INSERT INTO `payment001wb` (`sl_no`,`bslno`,`workmethod`,`amount`) VALUES 
+ (1,1,'Water Wash',100),
+ (2,1,'Interior cleaning',200),
+ (3,1,'Interior cleaning',400),
+ (4,2,'Water Wash',200),
+ (5,2,'Interior cleaning',300),
+ (6,3,'Water Wash',200),
+ (7,3,'Interior cleaning',300),
+ (8,4,'Water Wash',200),
+ (9,4,'Interior cleaning',300),
+ (10,5,'Water Wash',200),
+ (11,5,'Interior cleaning',300),
+ (12,6,'Water Wash',200),
+ (13,6,'Interior cleaning',300),
+ (14,7,'Water Wash',200),
+ (15,7,'Interior cleaning',300),
+ (16,8,'Water Wash',200),
+ (17,8,'Interior cleaning',300),
+ (18,9,'Water Wash',200),
+ (19,9,'Interior cleaning',300),
+ (20,10,'Water Wash',200),
+ (21,10,'Interior cleaning',300),
+ (22,11,'Water Wash',200),
+ (23,11,'Interior cleaning',300),
+ (24,12,'Water Wash',200),
+ (25,12,'Interior cleaning',300),
+ (26,13,'Water Wash',200),
+ (27,13,'Interior cleaning',300),
+ (28,14,'Water Wash',200),
+ (29,14,'Interior cleaning',300),
+ (30,15,'Water Wash',200),
+ (31,15,'Interior cleaning',300),
+ (32,16,'Water Wash',200),
+ (33,16,'Interior cleaning',300),
+ (34,17,'Water Wash',200),
+ (35,17,'Interior cleaning',300),
+ (36,18,'Water Wash',200),
+ (37,18,'Interior cleaning',300),
+ (38,19,'Water Wash',200),
+ (39,19,'Interior cleaning',300),
+ (40,20,'Water Wash',200),
+ (41,20,'Interior cleaning',300),
+ (42,21,'Water Wash',200),
+ (43,21,'Interior cleaning',300),
+ (44,22,'Water Wash',200),
+ (45,22,'Interior cleaning',300),
+ (46,23,'Water Wash',200),
+ (47,23,'Interior cleaning',300),
+ (48,24,'Water Wash',200),
+ (49,24,'Interior cleaning',300),
+ (50,25,'Water Wash',200),
+ (51,25,'Interior cleaning',300),
+ (52,26,'Water Wash',200),
+ (53,26,'Interior cleaning',300),
+ (54,27,'Water Wash',200),
+ (55,27,'Interior cleaning',300),
+ (56,28,'Water Wash',200),
+ (57,28,'Interior cleaning',300),
+ (58,29,'Water Wash',200),
+ (59,29,'Interior cleaning',300),
+ (60,30,'Water Wash',200),
+ (61,30,'Interior cleaning',300),
+ (62,31,'Water Wash',200),
+ (63,31,'Interior cleaning',300),
+ (64,32,'Water Wash',200),
+ (65,32,'Interior cleaning',300),
+ (66,33,'Water Wash',200),
+ (67,33,'Interior cleaning',300),
+ (68,34,'Water Wash',200),
+ (69,34,'Interior cleaning',300),
+ (70,35,'Water Wash',200),
+ (71,35,'Interior cleaning',300),
+ (72,36,'Water Wash',200),
+ (73,36,'Interior cleaning',300),
+ (74,37,'Water Wash',200),
+ (75,37,'Interior cleaning',300),
+ (76,38,'Water Wash',200),
+ (77,38,'Interior cleaning',300),
+ (78,39,'Water Wash',200),
+ (79,39,'Interior cleaning',300),
+ (80,40,'Water Wash',200),
+ (81,40,'Interior cleaning',300),
+ (82,41,'Water Wash',100),
+ (83,41,'Others',200),
+ (84,41,'Painting',7000);
+/*!40000 ALTER TABLE `payment001wb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `role001mb`
+--
+
+DROP TABLE IF EXISTS `role001mb`;
+CREATE TABLE `role001mb` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rolename` varchar(40) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `role001mb`
+--
+
+/*!40000 ALTER TABLE `role001mb` DISABLE KEYS */;
+INSERT INTO `role001mb` (`id`,`rolename`) VALUES 
+ (1,'superadmin'),
+ (2,'admin'),
+ (3,'manager'),
+ (4,'user');
+/*!40000 ALTER TABLE `role001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `salary001mb`
+--
+
+DROP TABLE IF EXISTS `salary001mb`;
+CREATE TABLE `salary001mb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `employename` varchar(200) NOT NULL,
+  `employesalary` varchar(200) NOT NULL,
+  `employeslarydate` datetime NOT NULL,
+  PRIMARY KEY (`sl_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `salary001mb`
+--
+
+/*!40000 ALTER TABLE `salary001mb` DISABLE KEYS */;
+INSERT INTO `salary001mb` (`sl_no`,`employename`,`employesalary`,`employeslarydate`) VALUES 
+ (1,'Naresh','15000','2023-08-02 00:00:00'),
+ (2,'Naresh','15000','2023-09-03 00:00:00'),
+ (3,'Naresh','15000','2023-10-02 00:00:00');
+/*!40000 ALTER TABLE `salary001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `user001mb`
+--
+
+DROP TABLE IF EXISTS `user001mb`;
+CREATE TABLE `user001mb` (
+  `person_id` int(11) NOT NULL AUTO_INCREMENT,
+  `roleid` int(11) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `status` char(1) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `insert_user` varchar(40) NOT NULL,
+  `insert_datetime` datetime NOT NULL,
+  `updated_user` varchar(40) DEFAULT NULL,
+  `updated_datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`person_id`),
+  KEY `roleid` (`roleid`),
+  CONSTRAINT `user001mb_ibfk_3` FOREIGN KEY (`roleid`) REFERENCES `role001mb` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user001mb`
+--
+
+/*!40000 ALTER TABLE `user001mb` DISABLE KEYS */;
+INSERT INTO `user001mb` (`person_id`,`roleid`,`firstname`,`lastname`,`username`,`password`,`status`,`email`,`insert_user`,`insert_datetime`,`updated_user`,`updated_datetime`) VALUES 
+ (1,1,'Naresh','Kumar','Nareshpk','$2b$10$Z816gYJQLTFXseL8snFbV.Gs7aMkfu2ecZe8byZIgBVxVjxtLRJ4a','A','nareshpk607@gmail.com','Naresh','2023-10-15 11:05:01',NULL,NULL),
+ (2,4,'Naresh','Kumar','Naresh','$2b$10$D2tKr9JTAu8MLGBWcH969e66rzOgSNjodwZe/pf5WQvQ4/padhpZi','A','nareshpk@gmail.com','Nareshpk','2023-10-15 17:09:03',NULL,NULL);
+/*!40000 ALTER TABLE `user001mb` ENABLE KEYS */;
+
+
+--
+-- Definition of table `workmethod001mb`
+--
+
+DROP TABLE IF EXISTS `workmethod001mb`;
+CREATE TABLE `workmethod001mb` (
+  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+  `worktype` varchar(200) NOT NULL,
+  PRIMARY KEY (`sl_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `workmethod001mb`
+--
+
+/*!40000 ALTER TABLE `workmethod001mb` DISABLE KEYS */;
+INSERT INTO `workmethod001mb` (`sl_no`,`worktype`) VALUES 
+ (1,'Water Wash'),
+ (2,'Interior cleaning'),
+ (3,'Teflon Cleaning'),
+ (4,'Painting'),
+ (5,'Others'),
+ (6,'Test');
+/*!40000 ALTER TABLE `workmethod001mb` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
