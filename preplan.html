@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .table-cell {
+            position: relative;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        .vl {
+            border-left: 6px solid green;
+            height: 250px;
+            position: fixed;
+            left: 50%;
+            top: 0;
+        }
+
+        input[type="checkbox"] {
+            background-color: chartreuse;
+        }
+
+        span.Naresh {
+            float: left;
+            font-size: 18px;
+            font-weight: bolder;
+
+        }
+    </style>
+</head>
+
+<body>
+    {{#each purcheck}}
+    <table style="
+        border: 1px solid black;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 0.8em;
+      ">
+
+        <tr>
+
+            <td colspan="3">
+                <div style="display: flex;">
+                    <div style="margin-right: 400px;">
+
+                    </div>
+                    <div style="margin-left: 400px;margin-top: -70px;">
+                        <span style=" font-size: 14px">
+                            Bill No:<span style="margin-left: 30px">{{this.billno}}</span>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size: 18px">Quality auto service</h4>
+                    <span style="font-size: 13px">2/169E Ayyappam Nagar,(Near Hi-tech Arai Pvt Ltd)</span><br />
+                    <span style="font-size: 13px">Chennai-Trichy Highway Koothur Pin-621216</span><br />
+                    <span style="font-size: 13px">90476 88866 / 99947 91976</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="Naresh">
+                    Customer Name:
+                </span><span style="font-size: 18px;">{{this.cusname}}</span><br />
+                <span class="Naresh">Contact:</span> <span style="font-size: 18px;">{{this.mobile}}</span><br />
+                <span class="Naresh">Address:</span> <span style="font-size: 18px;">{{this.address}}</span>
+            </td>
+            <td>
+
+                <span class="Naresh">
+                    Date:
+                </span><span style="font-size: 18px;">{{this.date}}</span><br />
+                <span class="Naresh">V.Model:</span> <span style="font-size: 18px;">{{this.veichalmodel}}</span><br />
+                <span class="Naresh">RegNo:</span> <span style="font-size: 18px;">{{this.regno}}</span><br />
+                <span class="Naresh">KMS:</span> <span style="font-size: 18px;">{{this.kms}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div style="height: 20px">
+                    <h6 style="font-size: 18px">Particular</h6>
+                </div>
+            </td>
+            <td>
+                <div style="height: 20px">
+                    <h6 style="font-size: 18px">Amount</h6>
+                </div>
+            </td>
+        </tr>
+        {{#each payment001wbs}}
+        <tr>
+            <td>
+                <div style="height: 50px">
+                    <span>{{this.workmethod}}</span>
+                </div>
+            </td>
+            <td>
+                <div style="height: 50px">
+                    <span>{{this.amount}}</span>
+                </div>
+            </td>
+
+        </tr>
+        {{/each}}
+        <tr>
+            <td>
+                <div style="height: 20px">
+                    <h6 style="font-size: 18px">Total Amount</h6>
+                </div>
+            </td>
+            <td>
+                <div style="height: 20px">
+                    <h6 style="font-size: 18px">{{this.totalamount}}</h6>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-style: hidden !important">
+                <div style="height: 50px">
+                    <input type="checkbox" class="checkbox1" id="{true}" name="true" value="D01" />
+                    <label style="font-size: 18px">{{this.payment}}</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-style: hidden !important">Thank You Visit Again</td>
+            <td style="border-style: hidden !important">Authorised Signature</td>
+        </tr>
+
+    </table>
+    <div style="page-break-before: always"></div>
+    {{/each}}
+</body>
+
+</html>
